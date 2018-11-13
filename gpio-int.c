@@ -40,6 +40,7 @@ static void  wait_for_int (int f)
 	ret = poll(poll_fds, 1, -1);
 	if (ret > 0) {
 		n = read(f, &value, sizeof(value));
+		lseek(f, 0, SEEK_SET);
 		printf("read %d bytes, value=%c\n", n, value[0]);
 	}
 }

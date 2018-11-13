@@ -67,6 +67,7 @@ int main (int argc, char *argv[])
 		if (poll(poll_fds, 1, -1) == 1) {
 			printf("polled\n");
 			read(f_in, buf, sizeof(buf));
+			lseek(f_in, 0, SEEK_SET);
 			if (out == '0')
 				out = '1';
 			else
