@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if [ $(cat /etc/debian_version) != "7.4" ]; then
     echo "Only tested with version 7.4. It may not work with this version"

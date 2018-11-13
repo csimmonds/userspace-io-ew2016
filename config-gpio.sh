@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "P9_12 gpio 60) is input, trigger on falling edge"
 echo 60 > /sys/class/gpio/export
